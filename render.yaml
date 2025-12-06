@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: magenx404-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRY
+        value: 30d
+      - key: SOLANA_RPC_URL
+        sync: false
+        # Set this in Render dashboard: https://api.mainnet-beta.solana.com or your RPC provider URL

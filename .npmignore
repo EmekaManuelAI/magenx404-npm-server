@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Tests
+tests/
+*.test.js
+*.spec.js
+vitest.config.js
+
+# Server files (not part of npm package)
+server/
+*.ts
+tsconfig.json
+
+# Development files
+.git/
+.gitignore
+.vscode/
+.idea/
+*.log
+*.swp
+*.swo
+.DS_Store
+
+# Documentation (keep README.md, exclude others)
+API.md
+DEPLOY.md
+SERVER_SETUP.md
+NEXTJS_SETUP.md
+
+# Deployment files
+deploy.sh
+render.yaml
+example.js
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
