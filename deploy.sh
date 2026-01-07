@@ -14,10 +14,27 @@ fi
 echo "✅ Logged in as: $(npm whoami)"
 echo ""
 
+# Install dependencies if needed
+echo "📦 Checking dependencies..."
+if [ ! -d "node_modules" ] || [ ! -f "node_modules/.bin/vitest" ]; then
+  echo "📥 Installing dependencies..."
+  npm install
+fi
+echo ""
+
 # Run tests
 echo "🧪 Running tests..."
-npm test
-echo "✅ All tests passed!"
+if npm test; then
+  echo "✅ All tests passed!"
+else
+  echo "⚠️  Tests failed or skipped."
+  read -p "Continue with deployment anyway? (y/N) " -n 1 -r
+  echo ""
+  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    echo "❌ Deployment cancelled."
+    exit 1
+  fi
+fi
 echo ""
 
 # Check what will be published

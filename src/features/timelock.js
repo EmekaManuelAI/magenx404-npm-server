@@ -39,7 +39,8 @@ export async function X404TimeLock(config) {
   console.log("Starting x404-TimeLock authentication...");
 
   // Get wallet from config or show modal
-  const wallet = await getWalletFromConfigOrModal(config);
+  const logoPaths = config.logoPaths || {};
+  const wallet = await getWalletFromConfigOrModal(config, logoPaths);
   if (!wallet) {
     return {
       success: false,

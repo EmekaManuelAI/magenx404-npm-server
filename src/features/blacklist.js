@@ -40,7 +40,8 @@ export async function X404Blacklist(config) {
   console.log("Starting x404-Blacklist authentication...");
 
   // Get wallet from config or show modal
-  const wallet = await getWalletFromConfigOrModal(config);
+  const logoPaths = config.logoPaths || {};
+  const wallet = await getWalletFromConfigOrModal(config, logoPaths);
   if (!wallet) {
     return {
       success: false,

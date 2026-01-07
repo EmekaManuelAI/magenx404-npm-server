@@ -39,7 +39,8 @@ export async function X404Activity(config) {
   console.log("Starting x404-Activity authentication...");
 
   // Get wallet from config or show modal
-  const wallet = await getWalletFromConfigOrModal(config);
+  const logoPaths = config.logoPaths || {};
+  const wallet = await getWalletFromConfigOrModal(config, logoPaths);
   if (!wallet) {
     return {
       success: false,
