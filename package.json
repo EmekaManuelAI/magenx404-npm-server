@@ -1,6 +1,6 @@
 {
   "name": "magenx404",
-  "version": "1.2.1",
+  "version": "1.0.1",
   "main": "./index.js",
   "type": "module",
   "description": "magen 404 implementation - modular authentication features",
@@ -43,6 +43,7 @@
     "start": "tsx server/index.ts",
     "dev": "tsx watch server/index.ts",
     "build": "tsc",
+    "demo": "python3 -m http.server 8000 || python -m http.server 8000",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
