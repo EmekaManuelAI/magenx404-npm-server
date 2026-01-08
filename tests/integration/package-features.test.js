@@ -229,7 +229,7 @@ describe("Package Features Integration Tests", () => {
     it("should fetch nonce from server", async () => {
       const { getNonce } = await import("../../index.js");
       const nonce = await getNonce(
-        "https://magenx404.onrender.com/x404_auth/blacklist"
+        "https://magenx404-server-production.up.railway.app/x404_auth/blacklist"
       );
       expect(nonce).toBe("test-nonce-123");
       expect(global.fetch).toHaveBeenCalled();

@@ -1,6 +1,6 @@
 {
   "name": "magenx404",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "./index.js",
   "type": "module",
   "description": "magen 404 implementation - modular authentication features",

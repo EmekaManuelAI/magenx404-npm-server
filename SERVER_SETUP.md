@@ -58,10 +58,10 @@ You should receive a response with `X-404-Nonce` header.
 To use your local server instead of the hosted one, update the URLs in the feature files:
 
 ```javascript
-// Change from:
-const url = "https://magenx404.onrender.com/x404_auth/blacklist";
+// Production URL:
+const url = "https://magenx404-server-production.up.railway.app/x404_auth/blacklist";
 
-// To:
+// Local development:
 const url = "http://localhost:3000/x404_auth/blacklist";
 ```
 

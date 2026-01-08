@@ -5,7 +5,7 @@ This document describes the API endpoints that the x404 package expects to inter
 ## Base URL
 
 ```
-https://magenx404.onrender.com/x404_auth
+https://magenx404-server-production.up.railway.app/x404_auth
 ```
 
 ## Authentication Flow

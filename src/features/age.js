@@ -4,7 +4,7 @@ import bs58 from "bs58";
 import { getNonce, buildSigningPayload, signPayload } from "../utils/wallet.js";
 import { getWalletFromConfigOrModal } from "../utils/walletSelector.js";
 
-const url = "https://magenx404.onrender.com/x404_auth/age";
+const url = "https://magenx404-server-production.up.railway.app/x404_auth/age";
 const path = new URL(url).pathname;
 
 /**
